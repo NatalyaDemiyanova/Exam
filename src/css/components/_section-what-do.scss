@@ -1,5 +1,9 @@
 .section-what-do {
-    padding: 100px 0 140px;
+    padding: 50px 0 50px;
+
+    @include media {
+        padding: 100px 0 140px;
+    }
 
     &__container {
         @include flex(center, center, column); 
@@ -24,6 +28,10 @@
         width: 100%;
         @include flex(center, center, column);
 
+        &--second {
+            @include flex(center, center, column-reverse);
+        }
+
         @include media {
             @include flex(flex-start, center);
             &:not(:last-of-type) {
@@ -34,9 +42,10 @@
 
     &__image-box {
         @include flex(center, center, column);
-
         width: 100%;
         position: relative;
+        margin-bottom: 30px;
+
         &--first {
             margin-right: 0px; 
         }
@@ -44,6 +53,8 @@
         @include media {
             @include flex(flex-start, center, column);
             width: 60%;
+            margin-bottom: 0px;
+
             &--first {
                 margin-right: 70px; 
             }
@@ -65,7 +76,6 @@
 
     &__content {
         @include flex(center, center, column);
-
         width: 100%;
 
         @include media {
@@ -93,7 +103,11 @@
     }
 
     &__content-button {
-        margin-bottom: 80px;
+        margin-bottom: 40px;
+
+        @include media {
+            margin-bottom: 80px;
+        }
     }
 
     &__content-info {
@@ -101,8 +115,15 @@
         @include text($H300, 400);
         font-family: $secondary-font;
         font-style: italic;
+        margin-bottom: 30px;
+
         i {
            margin-right: 15px; 
+        }
+
+        
+        @include media {
+            margin-bottom: 0px;
         }
 
     }

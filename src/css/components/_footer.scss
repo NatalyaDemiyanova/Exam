@@ -15,9 +15,11 @@
         background-image: url(../images/footer_bg.png);
         @include background-image;
         height: 200px;
+        padding: 200px 0;
     }
 
     &__info-logo-social {
+        @include flex (space-between, center);
     }
 
     &__info-logo {
