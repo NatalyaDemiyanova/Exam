@@ -1,0 +1,43 @@
+// Colors
+$white: #ffffff;
+// $light: #fefefe;
+// $grey-light: #e8e8e8;
+
+$grey: #4b5562;
+$dark: #2c4058;
+$dark-blue:#7e5aff;
+$blue: #5474fd;
+$light-blue: #55b7ff;
+$placeholder-color: #4b5562;
+
+
+// Fonts
+$base-font: "Gotham", serif;
+$secondary-font: "OpenSans", sans-serif;
+
+@function calcRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+$H600: calcRem(80px);
+$H500: calcRem(44px);
+$H400: calcRem(22px);
+$H300: calcRem(18px);
+$H200: calcRem(16px);
+$H100: calcRem(14px);
+
+
+$screen-iphone: 414px;
+$screen-tablet: 768px;
+$screen-desktop: 1160px;
+$screen-desktop-large: 1280px;
+
+// $screen-iphone: 375px;
+// $screen-iphone-plus: 414px;
+// $screen-small-tablet: 480px;
+// $screen-tablet: 768px;
+
+// $screen-hd: 1366px;
+// $screen-fullhd: 1440px;
+// $screen-retina: 1660px;

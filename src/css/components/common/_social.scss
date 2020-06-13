@@ -1,0 +1,21 @@
+.social {
+    &__list {
+        @include flex(space-between, center); 
+    }
+
+    &__item {
+        @include flex(center, center); 
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+        i {
+            color: $white;
+        }
+    }
+}
+
+

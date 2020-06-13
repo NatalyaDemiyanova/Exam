@@ -1,0 +1,58 @@
+.glide {
+
+    &__slides {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -60px;
+        z-index: 5;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        &--right {
+            right: -60px;
+            left: auto;
+        } 
+
+        @include media($screen-desktop-large){
+            left: -100px;
+            &--right {
+                right: -100px;
+                left: auto;
+            } 
+        }
+    }
+
+    &__bullets {
+        @include flex(space-between, center); 
+        margin: 0 auto;
+        width: 205px;
+        &--header {
+            @include flex(center, flex-end, column); 
+            position: absolute;
+            top: -50%;
+            transform: translateY(15%);
+            right: 24px;
+        }
+    }
+
+    &__bullet {
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        border: 1.0px solid #ffffff;
+        background-color: transparent;
+        outline: none;
+        &--header {
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

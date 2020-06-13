@@ -1,0 +1,46 @@
+.header {
+    height: 100vh;
+    background-image: url(../images/header_bg.png);
+    @include background-image;
+    @include flex(center, center, column); 
+
+    &__container {
+        width: 100%;
+    }
+
+    // &__glide-slides {
+    // проблема сдесь ul
+    // }
+
+    &__glide-title {
+        @include text($H400, 700, $white);
+        line-height: 22px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 50px;
+
+        @include media ($screen-tablet) {
+            @include text($H500, 700, $white);
+        }
+
+        @include media {
+            @include text($H600, 700, $white);
+        }
+    }
+
+    &__glide-subtitle {
+        @include text($H100, 400, $white);
+        padding: 0 45px;
+        line-height: 22px;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        text-align: center;
+        margin-bottom: 35px;
+       
+        @include media {
+            @include text($H300, 400, $white);
+        }
+    }
+}

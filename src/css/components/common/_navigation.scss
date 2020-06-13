@@ -1,0 +1,45 @@
+.navigation {
+    height: 54px;
+    padding-top: 53px;
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; 
+
+    &__container {
+    @include flex(space-between, center); 
+
+    }
+
+    &__logo {
+        width: 243px;
+        height: 54px;
+    }
+
+    &__logo-icon {
+        width: 243px;
+        height: 54px;
+    }
+
+    &__list {
+        @include flex(space-between, center); 
+    }
+
+    &__item {
+        
+        &:not(:last-of-type) {
+            margin-right: 65px;
+        }
+    }
+
+
+    &__link {
+        @include text($H100, 400, $white);
+        line-height: 22px;
+        text-transform: uppercase;
+    }
+
+    &__social {
+    }
+}
