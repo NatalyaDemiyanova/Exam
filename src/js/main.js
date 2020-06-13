@@ -3,7 +3,7 @@ const sliderHeader = new Glide('#slider', {
   type: 'carousel',
   gap: 30,
   perView: 1,
-  // autoplay: 5000
+  autoplay: 5000
 });
 
 sliderHeader.mount();

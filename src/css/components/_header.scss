@@ -43,4 +43,9 @@
             @include text($H300, 400, $white);
         }
     }
+
+    &__scroll {
+        position: absolute;
+        bottom: 50px;
+    }
 }

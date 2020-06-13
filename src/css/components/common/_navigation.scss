@@ -2,14 +2,14 @@
     height: 54px;
     padding-top: 53px;
     position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; 
+
 
     &__container {
     @include flex(space-between, center); 
-
     }
 
     &__logo {
@@ -23,7 +23,11 @@
     }
 
     &__list {
-        @include flex(space-between, center); 
+        display: none;
+        
+        @include media {
+            @include flex(space-between, center);
+        }
     }
 
     &__item {
@@ -38,8 +42,5 @@
         @include text($H100, 400, $white);
         line-height: 22px;
         text-transform: uppercase;
-    }
-
-    &__social {
     }
 }

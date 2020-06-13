@@ -1,0 +1,23 @@
+.button {
+    display: inline-block;
+    @include text($H100, 400);
+    line-height: 22px;
+    text-transform: uppercase;
+    padding: 20px 41px;
+    border: 1.0px solid $dark;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    @include media($screen-desktop) {
+        &:hover {
+            border: 2.0px solid $blue;
+            color: $blue;
+            font-weight: 700;
+         }
+         &:focus {
+             background-color: $blue;
+             color: $white;
+             outline: none;
+          }
+    }    
+}

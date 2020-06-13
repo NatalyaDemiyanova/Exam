@@ -1,0 +1,40 @@
+
+
+
+.footer {
+
+    height: 500px;
+    &__map {
+        width: 100%;
+        height: 700px;
+        margin: 0;
+      padding: 0;
+    }
+
+    &__info {
+        background-image: url(../images/footer_bg.png);
+        @include background-image;
+        height: 200px;
+    }
+
+    &__info-logo-social {
+    }
+
+    &__info-logo {
+    }
+
+    &__info-social {
+    }
+
+    &__info-copy-made {
+    }
+
+    &__info-copy {
+    }
+
+    &__info-made {
+    }
+
+    &__contact {
+    }
+}

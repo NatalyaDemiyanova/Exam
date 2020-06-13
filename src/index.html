@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monticello</title>
-
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <!-- Подключаем слайдер Glide через CDN -->
     <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide/dist/css/glide.core.min.css">
@@ -15,56 +15,33 @@
   <body>
 
     //= templates/header.html
-
-  
-
-
-    <section class="section-what-do">
-      <div class="container section-what-do__container">
-        <div class="section-what-do__divider"></div>
-        <h2 class="section-what-do__title">what we do</h2>
-
-        <div class="section-what-do__row">
-          <div class="section-what-do__image-box">
-            <img class="section-what-do__image" src="images/what_we_do_1.png" alt="what_we_do">
-          </div>
-          <div class="section-what-do__content">
-            <h3 class="section-what-do__content-subtitle">One World</h3>
-            <h2 class="section-what-do__content-title">Trade Center</h2>
-            <p class="section-what-do__content-text">
-              Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts
-              are very powerful.
-            </p>
-            <a href="#" class="section-what-do__content-button button">more details</a>
-            <span class="section-what-do__content-info"><i class="fas fa-map-marker-alt"></i>New York City, United States - 1776 feet</span>
-          </div>
-        </div>
-          
-        <div class="section-what-do__row">
-          <div class="section-what-do__content">
-            <h3 class="section-what-do__content-subtitle">International</h3>
-            <h2 class="section-what-do__content-title">Commerce Centre</h2>
-            <p class="section-what-do__content-text">
-              Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital
-              advertising network may help.
-            </p>
-            <a href="#" class="section-what-do__content-button button">more details</a>
-            <span class="section-what-do__content-info"><i class="fas fa-map-marker-alt"></i>Hong Kong - 1588 Feet</span>
-          </div>
-          <div class="section-what-do__image-box">
-            <img class="section-what-do__image" src="images/what_we_do_2.png" alt="what_we_do">
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-
+    //= templates/section-what-do.html
     //= templates/section-news.html
-
+    
+    //= templates/footer.html
+    
     <!-- Подключаем слайдер Glide через CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+    <script>
+      function initMap() {
+        let uluru = { lat:  41.913254, lng: 12.531304 };
+        let map = new google.maps.Map(document.getElementById("map"), {
+          center: uluru,
+          zoom: 12  
+        });
+        let marker = new google.maps.Marker({
+          position: uluru, 
+          map: map, 
+          icon: "./images/map_marker.png"
+
+        });
+      }
+    </script>
+   
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDJc3ttdyNbYh2IDI2UotEFCDmo-4WEdI&callback=initMap"
+    type="text/javascript"></script>
+
     <script src="js/main.js"></script>
 
   </body>
