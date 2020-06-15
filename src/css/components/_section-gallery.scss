@@ -1,5 +1,9 @@
 .section-gallery {
-    padding: 140px 0;
+    padding: 70px 0;
+
+    @include media($screen-tablet) {
+        padding: 140px 0;
+    }
 
     &__container {
         @include flex(flex-start, center, column); 
@@ -10,7 +14,11 @@
     }
 
     &__title {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+
+        @include media($screen-tablet) {
+            margin-bottom: 100px;
+        }
     }
 
     &__image-box {
@@ -18,42 +26,81 @@
     }
 
     &__col-wrapper {
-        @include flex(flex-start, center); 
-    }
+        @include flex(flex-start, center, column); 
 
-    &__col {
-        &:not(:last-child) {
-            margin-right: 10px;
+        @include media($screen-tablet) {
+            @include flex(flex-start, center); 
         }
     }
 
-    &__row {
-        @include flex(flex-start, center); 
+    &__col {
+        position: relative;
+        width: 285px;
+        margin-right: 0px;
         &:not(:last-child) {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+        }
+
+        @include media($screen-iphone) {
+            width: 100%;
+        }
+
+        @include media($screen-tablet) {
+            &:not(:last-child) {
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+        }        
+    }
+
+    &__row {
+        @include flex(flex-start, center, column); 
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+
+        @include media($screen-iphone) {
+            @include flex(flex-start, center); 
         }
     }
 
     &__image-wrapper {
-
+       
         &--first-row {
-            &:not(:last-child) {
-                margin-right: 10px;
+            margin-right: 0px;
+            margin-bottom: 6px;
+
+            @include media($screen-iphone) {
+                margin-bottom: 0;
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
             }
         }
     
         &--second-row {
-            &:not(:last-child) {
-                margin-right: 10px;
+            margin-right: 0px;
+            margin-bottom: 6px;
+
+            @include media($screen-iphone) {
+                margin-bottom: 0;
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
             }
         }
     }
 
     &__image {
         width: 100%;
-        height: 100%;
-    }
+        // height: auto;
+        object-fit: cover;
 
-    &__button {
+        &--earth {
+            position: absolute;
+            top: 40%;
+            transform: translateX(-50%);
+            left: 50%;
+        }
     }
 }
