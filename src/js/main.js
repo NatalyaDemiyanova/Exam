@@ -21,7 +21,7 @@ const sliderNews = new Glide('#glide', {
       perView: 2
     },
     768: {
-      perView: 1
+      perView: 1,
     }
   }  
 });

@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
 
     &__map {
         width: 100%;
@@ -33,5 +34,10 @@
     }
 
     &__contact {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);;
+        bottom: 30%;
+
     }
 }

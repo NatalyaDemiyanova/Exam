@@ -1,9 +1,11 @@
 .contact {
     margin: 0 auto;
     max-width: 770px;
+    width: 100%;
     @include flex(flex-start, center, column); 
-    background-image: url(../images/footer__contact_bg.png);
+    background-image: url(../images/footer_contact_bg.png);
     @include background-image;
+    background-size: auto;
     padding: 60px;
 
     &__divider {
@@ -15,46 +17,58 @@
     }
 
     &__wrapper {
-        @include flex(space-between, flex-start); 
+        @include flex(flex-start, flex-start); 
+        width: 100%;
     }    
 
-    &__data {
+    &__list {
+        width: 50%;
         @include flex(flex-start, flex-start, column); 
-
     }
 
-    &__address {
+    &__item {
+        @include text($H300, 400, $dark);
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
+        }
     }
 
     &__icon {
-    }
-
-    &__tel {
-    }
-
-    &__mail {
-    }
-
-    &__time {
+        color: $dark-blue;
+        margin-right: 10px;
     }
 
     &__form-wrapper {
-
+        width: 50%;
+        padding-left: 15px;
     }
 
     &__form {
-        @include flex(flex-start, flex-start, column); 
-
-
+        @include flex(flex-start, flex-end, column); 
     }
 
     &__input {
-    }
+        @include text($H300, 400, $dark);
+        line-height: 22px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-bottom: 1px solid $dark;
+        outline: none;
+        margin-bottom: 30px;
 
-    &__email {
-    }
+        &:placeholder-shown {
+            @include text($H300, 400, $placeholder-color);
+            opacity: 0.5;
+            line-height: 22px;
+            padding-bottom: 15px;
+        }
 
-    &__button {
+        &:last-of-type {
+            margin-bottom: 30px;
+        }
     }
 }
+
+
 
