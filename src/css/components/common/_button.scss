@@ -10,14 +10,16 @@
 
     @include media($screen-desktop) {
         &:hover {
+            background-color: $blue;
+            color: $white;
+            outline: none;
+            border: none;
+        }
+        &:focus {
             border: 2.0px solid $blue;
             color: $blue;
+            background-color: $white;
             font-weight: 700;
-         }
-         &:focus {
-             background-color: $blue;
-             color: $white;
-             outline: none;
-          }
+        }
     }    
 }

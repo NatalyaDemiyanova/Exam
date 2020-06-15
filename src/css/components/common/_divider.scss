@@ -1,0 +1,8 @@
+.divider {
+    width: 100px;
+    height: 1px;
+    background-color: $dark;
+    &--marked {
+        background-color: $white;
+    }
+}

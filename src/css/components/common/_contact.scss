@@ -1,0 +1,60 @@
+.contact {
+    margin: 0 auto;
+    max-width: 770px;
+    @include flex(flex-start, center, column); 
+    background-image: url(../images/footer__contact_bg.png);
+    @include background-image;
+    padding: 60px;
+
+    &__divider {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 55px;
+    }
+
+    &__wrapper {
+        @include flex(space-between, flex-start); 
+    }    
+
+    &__data {
+        @include flex(flex-start, flex-start, column); 
+
+    }
+
+    &__address {
+    }
+
+    &__icon {
+    }
+
+    &__tel {
+    }
+
+    &__mail {
+    }
+
+    &__time {
+    }
+
+    &__form-wrapper {
+
+    }
+
+    &__form {
+        @include flex(flex-start, flex-start, column); 
+
+
+    }
+
+    &__input {
+    }
+
+    &__email {
+    }
+
+    &__button {
+    }
+}
+

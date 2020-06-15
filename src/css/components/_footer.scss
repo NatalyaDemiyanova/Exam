@@ -1,9 +1,5 @@
-
-
-
 .footer {
 
-    height: 500px;
     &__map {
         width: 100%;
         height: 700px;
@@ -14,27 +10,26 @@
     &__info {
         background-image: url(../images/footer_bg.png);
         @include background-image;
-        height: 200px;
         padding: 200px 0;
     }
 
     &__info-logo-social {
         @include flex (space-between, center);
-    }
-
-    &__info-logo {
-    }
-
-    &__info-social {
+        margin-bottom: 40px;
     }
 
     &__info-copy-made {
+        @include text($H100, 400, $white);
+        line-height: 22px;
     }
 
     &__info-copy {
+        padding-right: 20px;
+        border-right: 1px solid $white;
     }
 
     &__info-made {
+        padding-left: 20px;
     }
 
     &__contact {

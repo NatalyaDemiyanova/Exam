@@ -8,17 +8,10 @@
     }
 
     &__divider {
-        width: 100px;
-        height: 1px;
-        background-color: $white;
         margin-bottom: 40px;
     }
 
-    &__title {
-        @include text($H500, 500, $white);
-        line-height: 22px;
-        text-transform: uppercase;
-        text-align: center;
+    &__title { 
         margin-bottom: 100px;
     }
 
