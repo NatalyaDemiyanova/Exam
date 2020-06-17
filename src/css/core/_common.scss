@@ -20,7 +20,8 @@ a {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0px 24px;
-  @include media {
+
+  @include media($screen-desktop-large) {
     padding: 0;
   }
 }

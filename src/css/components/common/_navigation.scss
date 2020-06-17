@@ -7,18 +7,26 @@
     right: 0;
     z-index: 10; 
 
-
     &__container {
-    @include flex(space-between, center); 
+        @include flex(space-between, center); 
+        padding: 0;
+
+        @include media($screen-desktop) {
+            padding: 0 24px;
+        }
     }
 
     &__logo {
-        width: 243px;
+        width: 244px;
         height: 54px;
+        transform: scale(0.75);
+        @include media {
+           transform: scale(1);
+        }
     }
 
     &__logo-icon {
-        width: 243px;
+        width: 244px;
         height: 54px;
     }
 
@@ -37,10 +45,21 @@
         }
     }
 
-
     &__link {
         @include text($H100, 400, $white);
         line-height: 22px;
         text-transform: uppercase;
+    }
+
+    &__social {
+        display: none;  
+
+        @include media($screen-tablet) {
+            display: block;
+        }
+    }
+
+    &__burger {
+        margin-right: 24px;
     }
 }

@@ -5,8 +5,14 @@
     @include flex(flex-start, center, column); 
     background-image: url(../images/footer_contact_bg.png);
     @include background-image;
-    background-size: auto;
-    padding: 60px;
+    
+    padding: 80px 24px;
+    z-index: 5;
+
+    @include media($screen-tablet) {
+        padding: 60px;
+        background-size: auto;
+    } 
 
     &__divider {
         margin-bottom: 30px;
@@ -17,13 +23,24 @@
     }
 
     &__wrapper {
-        @include flex(flex-start, flex-start); 
+        @include flex(flex-start, flex-start, column); 
         width: 100%;
+
+        @include media($screen-tablet) {
+            @include flex(flex-start, flex-start); 
+            
+        } 
     }    
 
     &__list {
-        width: 50%;
+        width: 100%;
         @include flex(flex-start, flex-start, column); 
+        margin-bottom: 40px;
+
+        @include media {
+            width: 50%;
+            margin-bottom: 0;
+        } 
     }
 
     &__item {
@@ -39,8 +56,12 @@
     }
 
     &__form-wrapper {
-        width: 50%;
-        padding-left: 15px;
+        width: 100%;
+
+        @include media {
+            width: 50%;
+            padding-left: 15px;
+        } 
     }
 
     &__form {

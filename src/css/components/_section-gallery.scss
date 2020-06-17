@@ -1,7 +1,11 @@
 .section-gallery {
-    padding: 70px 0;
+    padding: 50px 0;
 
     @include media($screen-tablet) {
+        padding: 100px 0;
+    }
+
+    @include media {
         padding: 140px 0;
     }
 
@@ -22,7 +26,11 @@
     }
 
     &__image-box {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
+
+        @include media($screen-tablet) {
+            margin-bottom: 60px;
+        }
     }
 
     &__col-wrapper {

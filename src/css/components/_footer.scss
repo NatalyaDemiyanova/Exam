@@ -5,28 +5,69 @@
         width: 100%;
         height: 700px;
         margin: 0;
-      padding: 0;
+        padding: 0;
     }
 
     &__info {
         background-image: url(../images/footer_bg.png);
         @include background-image;
-        padding: 200px 0;
+        padding: 300px 0 100px;
+        @include flex (center, center, column);
+
+        @include media($screen-tablet) {
+            padding: 150px 0 100px;
+        }
+
+        @include media {
+            padding: 200px 0;
+            width: 100%;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 770px;
     }
 
     &__info-logo-social {
-        @include flex (space-between, center);
-        margin-bottom: 40px;
+        @include flex (center, center, column);
+        margin-bottom: 30px; 
+       
+        @include media($screen-tablet) {
+            @include flex (space-between, center);
+            margin-bottom: 40px;
+        }
+    }
+
+    &__info-logo {
+        margin-bottom: 30px;
+
+        @include media($screen-tablet) {
+            margin-bottom: 0;
+        }  
     }
 
     &__info-copy-made {
         @include text($H100, 400, $white);
         line-height: 22px;
+        text-align: center;
+
+        @include media($screen-tablet) {
+          text-align: left;
+        } 
+
     }
 
     &__info-copy {
-        padding-right: 20px;
-        border-right: 1px solid $white;
+        display: block; 
+        margin-bottom: 20px;      
+
+        @include media($screen-tablet) {
+            display: inline;
+            padding-right: 20px;
+            border-right: 1px solid $white;
+            margin-bottom: 0;
+        }  
     }
 
     &__info-made {
@@ -38,6 +79,10 @@
         left: 50%;
         transform: translateX(-50%);;
         bottom: 30%;
+        z-index: 5;
 
+        @include media {
+            
+        } 
     }
 }

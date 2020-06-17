@@ -1,7 +1,11 @@
 .section-news {
     background-image: url(../images/header_bg.png);
     @include background-image;
-    padding: 140px 0;
+    padding: 80px 0;
+
+    @include media {
+        padding: 140px 0;
+    }
 
     &__container {
         @include flex(flex-start, center, column); 
@@ -12,7 +16,11 @@
     }
 
     &__title { 
-        margin-bottom: 100px;
+        margin-bottom: 60px;
+
+        @include media {
+            margin-bottom: 100px;
+        }
     }
 
     &__slider {

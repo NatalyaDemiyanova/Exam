@@ -1,7 +1,10 @@
 .section-what-do {
-    padding: 50px 0 50px;
+    padding-top: 50px;
 
     @include media {
+        padding: 100px 0 140px;
+    }
+    @include media($screen-desktop-large) {
         padding: 100px 0 140px;
     }
 
@@ -14,19 +17,29 @@
     }
 
     &__title {
-        margin-bottom: 170px;
+        margin-bottom: 60px;
+
+        @include media($screen-tablet) {
+            margin-bottom: 100px;
+        }
+        @include media($screen-desktop-large) {
+            margin-bottom: 170px;
+        }
     }
 
     &__row {
         width: 100%;
         @include flex(center, center, column);
+        margin-bottom: 80px;
 
         &--second {
             @include flex(center, center, column-reverse);
         }
 
-        @include media {
+        @include media($screen-tablet) {
             @include flex(flex-start, center);
+        }
+        @include media {
             &:not(:last-of-type) {
                 margin-bottom: 200px;
             } 
@@ -35,53 +48,68 @@
 
     &__image-box {
         @include flex(center, center, column);
-        @include padding-hack(40%)
-        min-width: 630px;
+        @include padding-hack(75%);
+        max-width: 630px;
+        width: 100%;
         position: relative;
         margin-bottom: 30px;
         // background-color: red;
 
-        &--first {
-            margin-right: 0px; 
-        }
-
-        @include media {
+        @include media($screen-tablet) {
             @include flex(flex-start, center, column);
             margin-bottom: 0px;
+            @include padding-hack(32%);
+            width: 80%;
+        }
+        @include media {
+            @include padding-hack(35%);
+            width: 100%;
+        }
 
-            &--first {
+        &--first {
+            margin-right: 0px; 
+
+            @include media($screen-tablet) {
+                margin-right: 30px; 
+            }
+            @include media {
                 margin-right: 70px; 
             }
-        }
-           
+        } 
     }
+
     &__image-bcg {
         position: absolute;
-        width: 585px;
+        max-width: 585px;
         height: 470px;
         background-color: $blue;
-        top: -70px;
-        left: -235px;
+        top: -24px;
+        left: -24px;
         z-index: -1;
         width: 100%;
         height: 100%;
 
         &--second {
             background-color: $dark-blue;
-            left: 235px;
+            max-width: 585px;
+            left: 24px;
+        }
+
+        @include media($screen-desktop-large) {
+            top: -70px;
+            left: -235px;
+
+            &--second {
+                left: 235px;
+            }
         }
     } 
-
-    &__image {
-    //    width: 80%;
-    //    text-align: center;
-    }
 
     &__content {
         @include flex(center, center, column);
         width: 100%;
 
-        @include media {
+        @include media($screen-tablet) {
             @include flex(flex-start, flex-start, column);
             
             &--second {
@@ -91,14 +119,23 @@
     }
 
     &__content-subtitle {
-        @include text($H400, 400);
+        @include text($H300, 400);
         line-height: 24px;
         text-transform: uppercase;
+
+        @include media($screen-tablet) {
+            @include text($H400, 400);
+        }
     }
 
     &__content-title {
-        @include text($H500, 700);
-        margin-bottom: 35px;
+        @include text($H400, 700);
+        margin-bottom: 20px;
+
+        @include media($screen-tablet) {
+            @include text($H500, 700);
+            margin-bottom: 35px;
+        }
     }
 
     &__content-text {
@@ -111,27 +148,24 @@
     &__content-button {
         margin-bottom: 40px;
 
-        @include media {
+        @include media($screen-desktop-large) {
             margin-bottom: 80px;
         }
     }
 
     &__content-info {
         display: block;
-        @include text($H300, 400);
+        @include text($H200, 400);
         font-family: $secondary-font;
         font-style: italic;
-        margin-bottom: 30px;
 
         i {
            margin-right: 15px; 
         }
-
-        
-        @include media {
-            margin-bottom: 0px;
+    
+        @include media($screen-tablet) {
+            @include text($H300, 400);
         }
-
     }
 }
 

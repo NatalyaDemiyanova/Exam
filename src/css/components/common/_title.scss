@@ -1,8 +1,18 @@
 .title {
-    @include text($H500, 700);
+    @include text($H400, 700);
     line-height: 22px;
     text-transform: uppercase;
+
     &--marked {
         color: $white;
     }
+
+    @include media($screen-tablet) {
+        @include text($H500, 700);
+        
+        &--marked {
+            color: $white;
+        }
+    }
+
 }

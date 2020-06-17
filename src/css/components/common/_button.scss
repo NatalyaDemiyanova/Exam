@@ -1,15 +1,24 @@
 .button {
     display: inline-block;
-    @include text($H100, 400);
+    @include text($H100, 400, $white);
     line-height: 22px;
     text-transform: uppercase;
     padding: 20px 41px;
-    border: 1.0px solid $dark;
-    background-color: transparent;
+    background-color: $blue;
+    border: none;
+    outline: none;
+   text-align: center;
+    width: 100%;
     cursor: pointer;
     transition: all 0.2s ease;
 
-    @include media($screen-desktop) {
+    @include media($screen-tablet) {
+        @include text($H100, 400);
+        border: 1.0px solid $dark;
+        background-color: transparent;
+
+        width: fit-content;
+        
         &:hover {
             background-color: $blue;
             color: $white;
