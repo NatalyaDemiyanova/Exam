@@ -1,74 +1,78 @@
 .glide {
 
-    &__track {
+	&__track {
+	}
+
+	&__slides {
+		width: 1170px;
+		width: 100%;
+		margin-bottom: 60px;
+	}
+
+	&__arrow {
+		display: none;
+
+		@include media($screen-tablet) {
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -60px;
+			z-index: 5;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			&--right {
+				right: -60px;
+				left: auto;
+			}     
+		}
+	
+		@include media($screen-desktop-large){
+			left: -100px;
+			&--right {
+				right: -100px;
+				left: auto;
+			} 
+		}
+	}
+
+	&__bullets {
+		@include flex(space-between, center); 
+		margin: 0 auto;
+		width: 205px;
+		&--header {
+			@include flex(center, flex-end, column); 
+			position: absolute;
+			right: 24px;
+			transform: translateY(-25%);
+
+			@include media($screen-tablet) {
+				top: -50%;
+				transform: translateY(30%);
+			}
+
+			@include media($screen-desktop) {
+				transform: translateY(15%);
+			}
+		}  
+	}
+
+	&__bullet {
+		height: 9px;
+		width: 9px;
+		border-radius: 50%;
+		border: 1.0px solid #ffffff;
+		background-color: transparent;
+		outline: none;
+		transition: all 0.2s ease-in-out;
+		&--header {
+			&:not(:last-of-type) {
+				margin-bottom: 40px;
+			}
+		}
+		&--active {
+      background-color: $white;
     }
-
-    &__slides {
-        width: 1170px;
-        width: 100%;
-        margin-bottom: 60px;
-    }
-
-    &__arrow {
-        display: none;
-
-        @include media($screen-tablet) {
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: -60px;
-            z-index: 5;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            &--right {
-                right: -60px;
-                left: auto;
-            }     
-        }
-      
-        @include media($screen-desktop-large){
-            left: -100px;
-            &--right {
-                right: -100px;
-                left: auto;
-            } 
-        }
-    }
-
-    &__bullets {
-        @include flex(space-between, center); 
-        margin: 0 auto;
-        width: 205px;
-        &--header {
-            @include flex(center, flex-end, column); 
-            position: absolute;
-            right: 24px;
-            transform: translateY(-25%);
-
-            @include media($screen-tablet) {
-                top: -50%;
-                transform: translateY(30%);
-            }
-
-            @include media($screen-desktop) {
-                transform: translateY(15%);
-            }
-        }  
-    }
-
-    &__bullet {
-        height: 9px;
-        width: 9px;
-        border-radius: 50%;
-        border: 1.0px solid #ffffff;
-        background-color: transparent;
-        outline: none;
-        &--header {
-            &:not(:last-of-type) {
-                margin-bottom: 40px;
-            }
-        }
-    }
+	}
 }
