@@ -1,8 +1,5 @@
 .glide {
 
-	&__track {
-	}
-
 	&__slides {
 		width: 1170px;
 		width: 100%;
@@ -65,7 +62,7 @@
 		border: 1.0px solid #ffffff;
 		background-color: transparent;
 		outline: none;
-		transition: all 0.2s ease-in-out;
+		transition: all 0.5s ease-in-out;
 		&--header {
 			&:not(:last-of-type) {
 				margin-bottom: 40px;
